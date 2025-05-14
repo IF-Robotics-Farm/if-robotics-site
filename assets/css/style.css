@@ -1,0 +1,50 @@
+
+/* Global Style */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Montserrat',sans-serif;color:#000;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+.container{width:90%;max-width:1200px;margin:0 auto;}
+
+/* Header & Nav */
+header{background:#000;color:#fff;position:sticky;top:0;z-index:1000}
+nav{display:flex;align-items:center;justify-content:space-between;height:70px;}
+nav ul{display:flex;gap:24px;list-style:none;}
+nav a{color:#fff;font-weight:700;font-size:1.155rem;}
+nav a:hover{opacity:.8;}
+.logo img{height:36px;}
+.lang-switch a{font-size:.9rem;}
+
+/* Sections */
+section{padding:80px 0;}
+h2{font-size:2.2rem;margin-bottom:40px;text-align:center;font-weight:700;}
+
+/* Hero */
+.hero{height:70vh;background:url('../images/hero.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;}
+.hero-inner h1{font-size:3.5rem;margin-bottom:16px;font-weight:700;}
+.hero-inner p{font-size:2.5rem;}
+
+/* Cards */
+.grid{display:grid;gap:28px;}
+.mini-card,.card{display:block;border:1px solid #eee;border-radius:8px;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+.mini-card:hover,.card:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(0,0,0,.08);}
+.mini-card h3{font-size:1.2rem;margin:16px;font-weight:600;}
+.mini-card p{margin:0 16px 24px;font-size:.95rem;color:#555;}
+.card img{width:100%;height:200px;object-fit:cover;}
+.card-body{padding:18px;}
+.card-body h3{font-size:1.2rem;margin-bottom:8px;font-weight:600;}
+.card-body p{font-size:.95rem;color:#555;}
+
+/* Products page image scale */
+.card.product-card img{height:160px;}
+
+/* Footer */
+footer{background:#000;color:#fff;padding:40px 0;font-size:.9rem;}
+footer a{color:#fff;}
+.foot-line{margin-bottom:6px;font-size:.95rem;}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:2000;}
+.modal-content{background:#fff;color:#000;padding:30px;border-radius:8px;width:90%;max-width:720px;text-align:left;}
+.modal-content h3{margin-top:0;margin-bottom:16px;font-weight:700;font-size:1.3rem;}
+.modal-content .close{margin-top:20px;padding:8px 24px;border:none;background:#0072ff;color:#fff;border-radius:6px;cursor:pointer;}
+.modal-content .close:hover{background:#0056d8;}

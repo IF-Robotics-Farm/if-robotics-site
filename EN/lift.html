@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>L100 Lift</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .hero-l100{height:80vh;background:#fff;color:#000;position:relative;display:flex;align-items:center;justify-content:center;}
+    .hero-l100 h1{position:absolute;top:20px;left:20px;font-size:1.8rem;font-weight:700;margin:0;background:rgba(255,255,255,.7);padding:4px 10px;border-radius:6px;}
+    .hero-l100 img{width:var(--lift-max,80%);max-height:100%;object-fit:contain;transition:width .3s;}
+    .spec-table{width:100%;max-width:800px;margin:40px auto;border-collapse:collapse;font-size:.95rem;}
+    .spec-table th,.spec-table td{border:1px solid #ddd;padding:12px;text-align:center;}
+    .spec-table th{background:#fafafa;font-weight:600;}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><a href="index.html"><img src="../assets/images/logo.png" alt="IF Robotics"></a></div>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="contact.html">Location</a></li>
+        <li><a href="qa.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch"><a href="../KR/lift.html">KR</a></div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-l100">
+  <h1>L100 Lift</h1>
+  <img id="liftHero" src="../assets/images/l100_1_1.jpeg" alt="L100 Lift" style="--lift-max:80%">
+</section>
+
+<section class="container" style="padding:60px 0;">
+  <h2>Key Features</h2>
+  <table class="spec-table">
+    <tr><th>Item</th><th>Description</th><th>Remark</th></tr>
+    <tr><td>Max Working Height</td><td>3.5 m</td><td>Zig-zag elevation</td></tr>
+    <tr><td>Travel</td><td>Rail based</td><td>Smart rail</td></tr>
+    <tr><td>Safety Sensor</td><td>Tilt detection</td><td>7° tip-over angle</td></tr>
+    <tr><td>Battery</td><td>24 V 100 Ah</td><td>–</td></tr>
+    <tr><td>Lateral Shift</td><td>One-touch side move</td><td>Omni wheels</td></tr>
+  </table>
+</section>
+
+<!-- footer & modals unchanged … -->
+<!-- … 이하 동일 -->
+<script>
+  const imgList=["l100_1_1.jpeg","l100_1_2.jpeg","l100_1_3.jpeg","l100_1_4.jpeg","l100_1_5.jpeg","l100_1_6.jpeg","l100_1_7.jpeg","l100_1_8.jpeg","l100_2_1.jpeg","l100_2_2.jpeg","l100_2_3.jpeg","l100_2_4.jpeg","l100_2_5.jpeg"].map(f=>`../assets/images/${f}`);
+  let idx=0;
+  const imgEl=document.getElementById("liftHero");
+  setInterval(()=>{idx=(idx+1)%imgList.length;imgEl.src=imgList[idx];},2000);
+</script>
+</body>
+</html>

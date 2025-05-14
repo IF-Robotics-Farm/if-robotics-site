@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Technology – IF Robotics</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    .tech-item{display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:center;margin-bottom:80px;}
+    .tech-item img{width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08);object-fit:cover;}
+    .tech-item h3{font-size:1.5rem;margin-bottom:12px;font-weight:700;}
+    .tech-item ul{list-style:"– ";padding-left:1.2em;font-size:.95rem;line-height:1.8;}
+    @media(max-width:768px){.tech-item{grid-template-columns:1fr}.tech-item img{order:-1;margin-bottom:24px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><a href="index.html"><img src="../assets/images/logo.png" alt="IF Robotics"></a></div>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="contact.html">Location</a></li>
+        <li><a href="qa.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch"><a href="../KR/technology.html">KR</a></div>
+    </nav>
+  </div>
+</header>
+
+<section class="container" style="padding:80px 0;">
+  <h2>Core Technologies</h2>
+
+  <div class="tech-item" id="tech1">
+    <img src="../assets/images/아로코마크.jpg" alt="Single RGB-Depth Camera + ArUco">
+    <div>
+      <h3>Single RGB-Depth Camera + ArUco Marker</h3>
+      <ul>
+        <li>Low-cost solution achieving ±2 cm pose error using just one camera and markers.</li>
+        <li>Deep-learning visual-odometry module recalculates paths every 0.1 s for real-time response.</li>
+        <li>70 % cheaper than LiDAR and reliable in aisles narrower than 1 m.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tech-item" id="tech2">
+    <img src="../assets/images/자율주행.jpg" alt="YOLO v8 2D-Depth Fusion">
+    <div>
+      <h3>YOLO v8 2D-Depth Fusion Vision</h3>
+      <ul>
+        <li>Combines 2D bounding boxes with depth maps to compute true size &amp; volume.</li>
+        <li>Trained on 20 k labelled images, reaching F1 score 0.92.</li>
+        <li>Runs on Jetson Orin-NX in 25 ms per frame, classifies ripeness &amp; defects in real time.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tech-item" id="tech3">
+    <img src="../assets/images/로봇팔.jpg" alt="7-DoF Arm + Dual-stage Soft Gripper">
+    <div>
+      <h3>7-DoF Arm + Dual-Stage Soft Gripper</h3>
+      <ul>
+        <li>Elastic TPU gripper keeps contact force below 5 N, ensuring fruit damage <1 %.</li>
+        <li>Dual cutters separate stem &amp; leaves, minimising wound area.</li>
+        <li>Force-torque sensors and vision feedback auto-correct trajectories, zero re-calibration across cultivars.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tech-item" id="tech5">
+    <img src="../assets/images/메카넘휠.jpg" alt="Mecanum-Wheel Crab Chassis">
+    <div>
+      <h3>Mecanum-Wheel Crab Chassis</h3>
+      <ul>
+        <li>Magnetic encoders keep alignment on rails, free XY motion off-rails for any terrain.</li>
+        <li>Independent suspension absorbs 10 mm height gaps, passes multi-tier NFT beds effortlessly.</li>
+        <li>Crab mode 0.5 m turning radius, safety sensors stop within 0.2 s to protect workers.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- footer & modals unchanged … -->
+<!-- … 이하 동일 -->
+</body>
+</html>

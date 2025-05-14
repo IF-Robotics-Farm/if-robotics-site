@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>About Us – IF Robotics</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-size:1.05rem;}
+    h2{font-size:2.4rem;margin-top:80px;text-align:center;font-weight:700;}
+    .container p{line-height:1.9;}
+    .vision{position:relative;padding:100px 20px;color:#fff;text-align:center;overflow:hidden;}
+    .vision::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,71,171,.85),rgba(0,140,255,.85)),url('../assets/images/vision_bg.jpg') center/cover no-repeat;filter:brightness(.9);z-index:-1;}
+    .vision h2{margin-top:0;color:#fff;}
+    .vision p{max-width:900px;margin:0 auto;color:#e0e8ff;}
+    .sign{margin-top:30px;text-align:right;font-weight:700;}
+    .history{max-width:800px;margin:0 auto;padding-left:20px;list-style:disc;font-size:1.05rem;}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="../assets/images/logo.png" alt="IF Robotics"></a>
+      </div>
+
+      <ul>
+        <li><a href="about.html">About&nbsp;Us</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="contact.html">Location</a></li>
+        <li><a href="qa.html">Contact</a></li>
+      </ul>
+
+      <div class="lang-switch">
+        <!-- English page → link to Korean counterpart -->
+        <a href="../KR/about.html">KR</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section id="ceo" class="container" style="padding:80px 0;">
+  <h2>CEO Message</h2>
+  <p style="max-width:800px;margin:0 auto;white-space:pre-line;">
+Dear valued customers,  
+
+Founded in 2025 with the vision of building “robots that can handle every smart-farm task,” IF Robotics has focused on four core line-ups—high-altitude lift, transport robot, spray robot and harvest robot—to boost growers’ productivity.
+
+<strong>First, Technology Innovation —</strong> By 2027 we will realise a fully domestic robot platform using 3D Depth-RGB fusion vision and a mecanum-drive chassis.
+
+<strong>Second, Product Road-map —</strong> We will successively launch the L100 in 2025, M100 in 2026, S100 in 2027 and H100 in 2028, setting the standard for smart-farm automation.
+
+<strong>Third, Affordable Pricing Strategy —</strong> Through RaaS and SaaS models, farmers can enjoy innovation without heavy upfront investment.
+
+<strong>Fourth, Global Challenge —</strong> Starting with our first export in 2028, we aim to lead the worldwide agricultural-robot market.
+
+Thank you for your continued support.
+  </p>
+  <div class="sign">Hun-Joong&nbsp;Lee, CEO, IF Robotics&nbsp;Co., Ltd.</div>
+</section>
+
+<section id="vision" class="vision">
+  <h2>Vision 2030</h2>
+  <p>
+    <strong style="font-size:3rem;">“Hand repetitive &amp; hazardous farm tasks to robots,”</strong><br>
+    <strong style="font-size:3rem;">“Let farmers focus on data-driven decisions.”</strong><br><br>
+    By providing autonomous-driving &amp; autonomous-work robot platforms for smart-farm environments,<br>
+    we deliver <strong>2× productivity</strong> and <strong>50 % labour-time reduction</strong>.
+  </p>
+</section>
+
+<section id="history" class="container" style="padding:80px 0;">
+  <h2>History</h2>
+  <ul class="history">
+    <li>2025.02  Founded IF Robotics</li>
+    <li>2025.04  Established Corporate R&amp;D Center</li>
+    <li>2025.04  Signed Joint-Development Agreement for L100 Lift</li>
+  </ul>
+</section>
+
+<footer>
+  <div class="footer-inner container">
+    <p class="foot-line"><strong>IF Robotics&nbsp;Co., Ltd.</strong><span class="copyright">© IF Robotics Co., Ltd. 2025</span></p>
+    <p class="foot-line">Business Reg. No. 570-86-03344 / CEO Hun-Joong Lee / 031-8058-9425 / hunterlee94@if-robotics.com</p>
+    <p class="foot-line">HQ &amp; R&amp;D Center: 706 Dongtan-daero, Suite 236, IT Valley Ⅱ, Hwaseong-si, Gyeonggi-do, Republic of Korea &nbsp;|&nbsp; <a href="#" id="openTerm">Terms of Use</a> &nbsp;|&nbsp; <a href="#" id="openPrivacy">Privacy Policy</a></p>
+  </div>
+
+  <!-- ▼▼▼  Korean originals kept as-is per request ▼▼▼ -->
+  <!-- Terms-of-Use Modal -->
+  <div class="modal" id="modalTerm"><div class="modal-content"><h3>이용약관</h3><div style="max-height:60vh;overflow:auto;font-size:.9rem;line-height:1.7;white-space:pre-line;">…(앞서 제공된 한글 약관 전문)…
+</div><button class="close">닫기</button></div></div>
+
+  <!-- Privacy-Policy Modal -->
+  <div class="modal" id="modalPrivacy"><div class="modal-content"><h3>개인정보처리방침</h3><div style="max-height:60vh;overflow:auto;font-size:.9rem;line-height:1.7;white-space:pre-line;">…(앞서 제공된 한글 방침 전문)…
+</div><button class="close">닫기</button></div></div>
+</footer>
+
+<script>
+  /* modal script (shared) */
+  const openTerm = document.getElementById("openTerm");
+  const openPrivacy = document.getElementById("openPrivacy");
+  const modalTerm = document.getElementById("modalTerm");
+  const modalPrivacy = document.getElementById("modalPrivacy");
+  openTerm.addEventListener("click",()=>modalTerm.style.display="flex");
+  openPrivacy.addEventListener("click",()=>modalPrivacy.style.display="flex");
+  document.querySelectorAll(".modal").forEach(m=>{
+    m.addEventListener("click",e=>{
+      if(e.target===m||e.target.classList.contains("close")) m.style.display="none";
+    });
+  });
+</script>
+</body>
+</html>

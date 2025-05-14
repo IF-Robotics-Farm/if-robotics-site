@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact – IF Robotics</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .contact-box{width:100%;max-width:600px;margin:60px auto;}
+    .contact-box input,
+    .contact-box select,
+    .contact-box textarea{width:100%;padding:12px;margin-bottom:14px;border:1px solid #ccc;border-radius:6px;font-size:.95rem;}
+    .contact-box button{padding:10px 24px;font-size:1rem;background:#0072ff;color:#fff;border:none;border-radius:6px;cursor:pointer;transition:background .2s;}
+    .contact-box button:hover{background:#0056d8;}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><a href="index.html"><img src="../assets/images/logo.png" alt="IF Robotics"></a></div>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="contact.html">Location</a></li>
+        <li><a href="qa.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch"><a href="../KR/qa.html">KR</a></div>
+    </nav>
+  </div>
+</header>
+
+<section class="container" style="padding:60px 0;">
+  <h2>Contact Us</h2>
+  <form class="contact-box" action="https://formsubmit.co/hunterlee94@if-robotics.com" method="POST">
+    <input type="hidden" name="_subject" value="IF Robotics Inquiry" />
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="E-mail" required />
+    <select name="country" required>
+      <option value="" disabled selected>Select Country</option>
+      <option value="KR">Republic of Korea (KR)</option>
+      <option value="US">United States (US)</option>
+      <option value="JP">Japan (JP)</option>
+      <option value="CN">China (CN)</option>
+      <option value="DE">Germany (DE)</option>
+      <option value="FR">France (FR)</option>
+    </select>
+    <input type="tel" name="phone" placeholder="Phone (e.g. +82-10-1234-5678)" />
+    <textarea name="message" rows="10" placeholder="Message" required></textarea>
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- footer & modals unchanged … -->
+<!-- … 이하 동일 -->
+</body>
+</html>

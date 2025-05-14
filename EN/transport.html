@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>M100 Transport Robot</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .hero-m100{height:80vh;background:#fff;color:#000;position:relative;display:flex;align-items:center;justify-content:center;}
+    .hero-m100 h1{position:absolute;top:20px;left:20px;font-size:1.8rem;font-weight:700;margin:0;background:rgba(255,255,255,.7);padding:4px 10px;border-radius:6px;}
+    .hero-m100 img{width:var(--trans-max,80%);max-height:100%;object-fit:contain;transition:width .3s ease;}
+    .spec-table{width:100%;max-width:800px;margin:40px auto;border-collapse:collapse;font-size:.95rem;}
+    .spec-table th,.spec-table td{border:1px solid #ddd;padding:12px;text-align:center;}
+    .spec-table th{background:#fafafa;font-weight:600;}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><a href="index.html"><img src="../assets/images/logo.png" alt="IF Robotics"></a></div>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="contact.html">Location</a></li>
+        <li><a href="qa.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch"><a href="../KR/transport.html">KR</a></div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-m100">
+  <h1>M100 Transport Robot</h1>
+  <img id="transHero" src="../assets/images/m100_1_1.png" alt="M100 Transport Robot" style="--trans-max:80%">
+</section>
+
+<section class="container" style="padding:60px 0;">
+  <h2>Key Features</h2>
+  <table class="spec-table">
+    <tr><th>Item</th><th>Description</th><th>Remark</th></tr>
+    <tr><td>Autonomous Driving</td><td>Path generation &amp; obstacle-stop alert</td><td>Vision + Deep Learning</td></tr>
+    <tr><td>Payload</td><td>100 kg</td><td>Modular boxes</td></tr>
+    <tr><td>Drive</td><td>Mecanum wheels</td><td>360° movement</td></tr>
+    <tr><td>Battery</td><td>24 V 100 Ah</td><td>–</td></tr>
+    <tr><td>Communication</td><td>Wi-Fi / LTE</td><td>Remote call</td></tr>
+  </table>
+</section>
+
+<!-- footer & modals unchanged … -->
+<!-- … 이하 동일 -->
+<script>
+  const imgListT=["m100_1_1.png","m100_1_2.png","m100_1_3.png","m100_1_4.png","m100_1_5.png"].map(f=>`../assets/images/${f}`);
+  let idxT=0;
+  const imgElT=document.getElementById("transHero");
+  setInterval(()=>{idxT=(idxT+1)%imgListT.length;imgElT.src=imgListT[idxT];},2000);
+</script>
+</body>
+</html>
