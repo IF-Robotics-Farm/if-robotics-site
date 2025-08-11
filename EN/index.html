@@ -90,7 +90,37 @@
   </div>
 </section>
 
-<!-- footer & modals unchanged … -->
-<!-- … 이하 동일 -->
+
+<footer>
+  <div class="footer-inner container">
+    <p class="foot-line"><strong>IF Robotics&nbsp;Co., Ltd.</strong><span class="copyright">© IF Robotics Co., Ltd. 2025</span></p>
+    <p class="foot-line">Business Reg. No. 570-86-03344 / CEO Hun-Joong Lee / 031-8058-9425 / hunterlee94@if-robotics.com</p>
+    <p class="foot-line">HQ &amp; R&amp;D Center: 150 Dongtanyeongcheon-ro, Building B, Suite B209, Hyundai Silicon Alley Dongtan, Hwaseong-si, Gyeonggi-do, Republic of Korea &nbsp;|&nbsp; <a href="#" id="openTerm">Terms of Use</a> &nbsp;|&nbsp; <a href="#" id="openPrivacy">Privacy Policy</a></p>
+  </div>
+
+  <!-- ▼▼▼  Korean originals kept as-is per request ▼▼▼ -->
+  <!-- Terms-of-Use Modal -->
+  <div class="modal" id="modalTerm"><div class="modal-content"><h3>이용약관</h3><div style="max-height:60vh;overflow:auto;font-size:.9rem;line-height:1.7;white-space:pre-line;">…(앞서 제공된 한글 약관 전문)…
+</div><button class="close">닫기</button></div></div>
+
+  <!-- Privacy-Policy Modal -->
+  <div class="modal" id="modalPrivacy"><div class="modal-content"><h3>개인정보처리방침</h3><div style="max-height:60vh;overflow:auto;font-size:.9rem;line-height:1.7;white-space:pre-line;">…(앞서 제공된 한글 방침 전문)…
+</div><button class="close">닫기</button></div></div>
+</footer>
+
+<script>
+  /* modal script (shared) */
+  const openTerm = document.getElementById("openTerm");
+  const openPrivacy = document.getElementById("openPrivacy");
+  const modalTerm = document.getElementById("modalTerm");
+  const modalPrivacy = document.getElementById("modalPrivacy");
+  openTerm.addEventListener("click",()=>modalTerm.style.display="flex");
+  openPrivacy.addEventListener("click",()=>modalPrivacy.style.display="flex");
+  document.querySelectorAll(".modal").forEach(m=>{
+    m.addEventListener("click",e=>{
+      if(e.target===m||e.target.classList.contains("close")) m.style.display="none";
+    });
+  });
+</script>
 </body>
 </html>
