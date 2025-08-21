@@ -68,7 +68,7 @@
 <!-- footer & modals unchanged … -->
 <!-- … 이하 동일 -->
 <script>
-  const imgListT=["m100_1_1.png","m100_1_2.png","m100_1_3.png","m100_1_4.png","m100_1_5.png"].map(f=>`../assets/images/${f}`);
+  const imgListT=["m100_1_1.png","m100_1_2.png","m100_1_3.png","m100_1_4.png","m100_1_5.png", "m100_1_6.png", "m100_2_1.png", "m100_2_2.png"].map(f=>`../assets/images/${f}`);
   let idxT=0;
   const imgElT=document.getElementById("transHero");
   setInterval(()=>{idxT=(idxT+1)%imgListT.length;imgElT.src=imgListT[idxT];},2000);
